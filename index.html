@@ -15,23 +15,24 @@
         Lieblingsfarbe: lightblue
     </p>
 
-    <h2>Meine Lieblingsfächer</h2>
-    <ol>
-        <li>Mathematik</li>
-        <li>Sport</li>
-        <li>Informatik</li>
-    </ol>
-
-    <h2>Meine Hobbys</h2>
-    <ul id="liste-hobbys">
-        <!-- Wird per JavaScript befüllt -->
-    </ul>
+     <h2>Meine Hobbys</h2>
+    <ul id="liste-hobbys"></ul>
 
     <h2>Freies Bild</h2>
     <figure>
-        <!-- Bild aus Aufgabe 4 -->
         <img src="bild.jpg" alt="Mein Bild" width="300">
         <figcaption>Beschreibung des Bildes</figcaption>
+    </figure>
+
+    <!-- JavaScript -->
+    <script>
+        const hobbys = ["Fußball", "Gaming", "Musik", "DeinName"];  
+        const liste = document.getElementById("liste-hobbys");
+
+        hobbys.forEach(h => {
+            let li = document.createElement("li");
+            li.textContent = h;
+            liste.appendChild(li);
     </figure>
 
 </body>
